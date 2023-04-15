@@ -8,34 +8,67 @@
     <title>Encript</title>
 </head>
 <body>
-    <header>
+    
         <div id="div-arriba">
-            Parte arriba
+            <p id="texto">Alura Challenges ONE</p>
         </div>
-    </header>
-    <div id="div-formulario">
+        <div id="linea-gradial">
+            .
+        </div>
+    
+    <div id="div-formulario" class="sombreado">
         <div>
-            <textarea name="" class="formulario in" cols="30" rows="25" placeholder="Inserta un texto"></textarea>
+            <textarea id="in" class="formulario in" cols="30" rows="25" placeholder="Inserta un texto"></textarea>
         </div>
         <div>
-            <button class="botones encriptar">Encriptar</button>
-            <button class="botones desencriptar">Desencriptar</button>
+            <button class="botones encriptar" onclick="imprimir(valor_original.value)">Encriptar</button>
+            <button class="botones desencriptar" onclick="Desencriptar(valor_original.value)">Desencriptar</button>
         </div>
             
             
     </div>
 
-    <div id="div-encripts">
+    <div id="div-encripts" class="sombreado">
         <div>
-            <textarea name="" class="formulario out" cols="30" rows="25" placeholder="Aqui aparecera el texto encriptado"></textarea>
+            <textarea id="out"  class="formulario out" cols="30" rows="25" placeholder="Aqui aparecera el texto encriptado"></textarea>
         </div>
         <div>
-            <button class="botones encriptar">Copiar</button>
+            <button class="botones encriptar" id="copiar" onclick="copiar(valor_encriptado.value)">Copiar</button>
         </div>
     </div>
 
 </body>
 </html>
 <script>
+    var valor_original = document.querySelector("#in");
+    var valor_encriptado = document.querySelector("#out");
+    var encriptado = '';
 
+    function imprimir(valor){
+        if(valor == ''){
+            alert("Nada que encriptar");
+        }else{
+            var encriptado = valor.replace(/e/g, "enter").replace(/i/g, "imes").
+            replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+            valor_encriptado.value = encriptado;
+        }   
+    }
+    
+    function Desencriptar (valor){
+        if(valor == ''){
+            alert("Nada que desencriptar");
+        }else{
+            valor_encriptado.value = valor;
+        } 
+    }
+
+    function copiar(valor){
+        if(valor != ''){
+            alert("Copiado en el Clipboard: " + valor);
+            navigator.clipboard.writeText(valor);
+        }else{
+            alert("Nada que copiar");
+        }
+    }
+    
 </script>

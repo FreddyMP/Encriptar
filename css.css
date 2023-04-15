@@ -2,22 +2,36 @@ body{
     background-color: rgb(32, 30, 30);
     color: lightgrey;
 }
+#texto{
+    padding-top: 25px;
+    margin-left: 10%;
+}
 #div-arriba{
     background-color: rgb(14, 13, 13);
     width: 100%;
     height: 70px;
-    box-shadow: 1px 1px 10px rgb(189, 71, 140);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+#linea-gradial{ color:rgb(32, 30, 30);
+    height: 3px;
+    background: linear-gradient(to left, #286fda 40%, rgb(189, 71, 140) 60%);
+}
 #div-formulario{
     position: absolute;
-    border-right: solid;
-    border-width: 0.5px;
     margin-top: 50px;
     width: 40%;
     margin-left: 10%;
     height: 300px;
+
     
+    
+}
+
+.sombreado:hover{
+    padding: 0.7rem;
+    border-radius: 10px;
+    background: linear-gradient(to right, red, purple);
 }
 #footer{
     text-align: center;
@@ -31,21 +45,33 @@ body{
     left: 50%;
     margin-top: 50px;
     margin-left: 38px;
+    height: 300px;
     
 }
 .in{
     background-image: url('hh.svg');
     background-repeat: no-repeat;   
+    
+    
 }   
+::placeholder{
+    color: blue;
+}
 .out{
     background-image: url('ss.svg');
     background-repeat: no-repeat;   
+    
+}
+
+button:hover{
+    opacity: 0.5;
 }
 .formulario{
     border: none;
-    width: 90%;
+    width: 98%;
     border-radius: 10px;
     padding: 10px;
+    margin-left: -5px;
    
 }
 
