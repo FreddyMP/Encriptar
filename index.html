@@ -5,38 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Encript</title>
 </head>
 <body>
     
-        <div id="div-arriba">
-            <p id="texto">Alura Challenges ONE</p>
-        </div>
-        <div id="linea-gradial">
+    <div id="div-arriba">
+            <p class="texto">Alura Challenges ONE</p>
+    </div>
+    <div id="linea-gradial">
             .
-        </div>
+    </div>
     
     <div id="div-formulario" class="sombreado">
         <div>
             <textarea id="in" class="formulario in" cols="30" rows="25" placeholder="Inserta un texto"></textarea>
         </div>
         <div>
-            <button class="botones encriptar" onclick="imprimir(valor_original.value)">Encriptar</button>
-            <button class="botones desencriptar" onclick="Desencriptar(valor_original.value)">Desencriptar</button>
-        </div>
-            
-            
+            <button class="botones encriptar" onclick="imprimir(valor_original.value)">
+                <i class='fa fa-lock fa-2x'></i>
+                <p class="text-boton">Encriptar</p>
+            </button>
+            <button class="botones desencriptar" onclick="Desencriptar(valor_original.value)">
+                <i class='fa fa-unlock fa-2x'></i>
+                <p class="text-boton">Desencriptar</p> 
+            </button>
+        </div>        
     </div>
 
     <div id="div-encripts" class="sombreado">
         <div>
-            <textarea id="out"  class="formulario out" cols="30" rows="25" placeholder="Aqui aparecera el texto encriptado"></textarea>
+            <textarea id="out"  class="formulario out" cols="30" placeholder="Aqui aparecera el texto encriptado"></textarea>
         </div>
         <div>
-            <button class="botones encriptar" id="copiar" onclick="copiar(valor_encriptado.value)">Copiar</button>
+            <button class="botones encriptar" id="copiar" onclick="copiar(valor_encriptado.value)">
+                <i class='fa fa-clone fa-2x'></i>
+                <p class="text-boton">Copiar</p>
+            </button>
         </div>
     </div>
 
+    <div class="pie_pagina">
+        <Center>
+            <P class="texto">Freddy Miguel Pereyra </P>
+        </Center>
+        
+    </div>
 </body>
 </html>
 <script>

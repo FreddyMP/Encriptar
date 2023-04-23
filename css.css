@@ -2,9 +2,10 @@ body{
     background-color: rgb(32, 30, 30);
     color: lightgrey;
 }
-#texto{
+.texto{
     padding-top: 25px;
     margin-left: 10%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #div-arriba{
     background-color: rgb(14, 13, 13);
@@ -22,12 +23,13 @@ body{
     margin-top: 50px;
     width: 40%;
     margin-left: 10%;
-    height: 300px;
-
-    
-    
+    height: 300px;   
 }
+.fa-2x{
+color: rgb(84, 210, 219);
+display:none !important;
 
+}
 .sombreado:hover{
     padding: 0.7rem;
     border-radius: 10px;
@@ -51,8 +53,7 @@ body{
 .in{
     background-image: url('hh.svg');
     background-repeat: no-repeat;   
-    
-    
+    height: 300px;
 }   
 ::placeholder{
     color: blue;
@@ -60,6 +61,7 @@ body{
 .out{
     background-image: url('ss.svg');
     background-repeat: no-repeat;   
+    height: 300px;
     
 }
 
@@ -72,7 +74,6 @@ button:hover{
     border-radius: 10px;
     padding: 10px;
     margin-left: -5px;
-   
 }
 
 .botones{
@@ -95,6 +96,68 @@ button:hover{
     padding-left:66px ;
     padding-right:66px ;
 }
+
+
+.pie_pagina{
+    position:absolute;
+    top:600px;
+    width: 100%;
+    
+}
+
+@media screen and (max-width: 1330px) {
+    .encriptar {
+        padding-left:30px ;
+        padding-right:30px ;
+    }
+    .desencriptar {
+        padding-left:30px ;
+        padding-right:30px ;
+    }
+  }
+
+  @media screen and (max-width: 945px) {
+    .encriptar {
+        padding-left:15px ;
+        padding-right:15px ;
+        font-size: 14px;
+    }
+    .desencriptar {
+        padding-left:15px ;
+        padding-right:15px ;
+        font-size: 14px;
+    }
+    .botones{
+    margin-right: 10px;
+    }
+   
+  }
+
+  @media screen and (max-width: 788px) {
+    #div-formulario{
+    
+        margin-left: 3%;
+    }
+    #div-encripts
+    {
+        margin-left: 15px;
+    }
+  }
+  @media screen and (max-width: 523px) {
+    .fa-2x{
+        display: block !important;
+    }
+    .text-boton{
+        display: none;
+    }
+    #div-encripts
+    {
+        margin-left: 5px;
+    }
+  }
+
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
