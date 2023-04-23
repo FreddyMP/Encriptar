@@ -79,9 +79,11 @@
     }
 
     function copiar(valor){
+        
         if(valor != ''){
-            alert("Copiado en el Clipboard: " + valor);
             navigator.clipboard.writeText(valor);
+            alert("Copiado en el Clipboard: " + valor);
+            
         }else{
             alert("Nada que copiar");
         }
