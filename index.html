@@ -58,7 +58,9 @@
         if(valor == ''){
             alert("Nada que desencriptar");
         }else{
-            valor_encriptado.value = valor;
+            var Desencriptado = valor.replace(/enter/g, "e").replace(/imes/g, "i").
+            replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+            valor_encriptado.value = Desencriptado  ;
         } 
     }
 
